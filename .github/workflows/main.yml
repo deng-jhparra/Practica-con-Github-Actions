@@ -174,3 +174,14 @@ jobs:       # Los jobs son unidades de trabajo independientes que pueden ejecuta
           path: logs/
           if-no-files-found: error
           retention-days: 7
+
+ Comprobacion_job:
+    name: Paso de repaso
+    needs: segundo_job
+
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Mostrar un paso de Bienvenida
+        run:  echo "Bienvenido"
+        
