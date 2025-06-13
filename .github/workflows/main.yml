@@ -174,8 +174,7 @@ jobs:       # Los jobs son unidades de trabajo independientes que pueden ejecuta
           path: logs/
           if-no-files-found: error
           retention-days: 7
-
- Comprobacion_job:
+  comprobacion_job:
     name: Paso de repaso
     needs: segundo_job
 
@@ -183,5 +182,5 @@ jobs:       # Los jobs son unidades de trabajo independientes que pueden ejecuta
     
     steps:
       - name: Mostrar un paso de Bienvenida
-        run:  echo "Bienvenido"
+        run:  echo "Bienvenido "
         
